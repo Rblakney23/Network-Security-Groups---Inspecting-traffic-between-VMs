@@ -34,6 +34,7 @@ We’ll begin by creating two virtual machines in Azure:
 - One Linux (Ubuntu) VM
 
 - One Windows 10 VM
+  
 Each VM should be provisioned with 2 CPUs and placed within the same Virtual Network (VNet) to ensure they can communicate privately.
 
 Once both VMs are set up:
