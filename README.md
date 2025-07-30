@@ -29,6 +29,7 @@ In this lab, we use Wireshark to analyze inbound and outbound network traffic on
 <h2>Actions and Observations</h2>
 Welcome to this tutorial on using Network Security Groups (NSGs) and inspecting network protocols with Wireshark in an Azure environment.
 
+
 We’ll begin by creating two virtual machines in Azure:
 
 - One Linux (Ubuntu) VM
