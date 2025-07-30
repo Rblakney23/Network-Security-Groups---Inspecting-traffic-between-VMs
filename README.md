@@ -62,7 +62,7 @@ In the "_ADMINS" OU, right-click -> new -> User and create the user "Jane Doe". 
 <br />
 
 <p>
-<img src="https://i.imgur.com/jBgCBrs.png" height="400%" width="80%" alt="AD-adminCreation"/>
+<img src="https://i.imgur.com/sQf9Bup.png" height="400%" width="80%" alt="AD-adminCreation"/>
 </p>
 <p>
 Next, we have to join Client-1 machine to the Domain. To do this, right-click the Windows icon in the bottom left of the screen. Select System -> Rename this PC (advanced) -> under Computer Name select Change -> domain -> enter "mydomain.com". After your computer restarts, log back into the client machine with the "mydomain.com\labuser" credentials. Client-1 will now be a part of mydomain.com
