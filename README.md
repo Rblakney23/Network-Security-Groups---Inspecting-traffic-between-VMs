@@ -42,7 +42,7 @@ Once both VMs are set up:
 - Log into the Windows VM using Remote Desktop Protocol (RDP).
 
 - Download and install Wireshark from the official site:
-🔗 Wireshark Download
+[Wireshark Download](https://www.wireshark.org/download.html)
 
 - Open Wireshark and apply a filter for ICMP traffic only. ICMP (Internet Control Message Protocol) is a Layer 3 protocol used for diagnostic purposes — for example, by the ping command to test connectivity between two hosts.
 
