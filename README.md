@@ -73,7 +73,7 @@ Next, we have to join Client-1 machine to the Domain. To do this, right-click th
 <br />
 
 <p>
-<img src="https://i.imgur.com/m8PnNVm.png" height="400%" width="80%" alt="AD-joinClientDomain"/>
+<img src="https://i.imgur.com/wgPjX9P.png" height="400%" width="80%" alt="AD-joinClientDomain"/>
 </p>
 <p>
 Now that Client-1 is joined to the Domain, the next part is to set up Remote Desktop for non-admin users on the client machine. Log into Client-1 as jane_admin -> right-click the Windows icon in the bottom left of the screen. Select System -> Remote Desktop -> add "Domain Users" to give that group access to remote desktop.  
