@@ -25,11 +25,29 @@ In this lab, we use Wireshark to analyze inbound and outbound network traffic on
 - Test network communication between VMs
 - Experiment w/ NSGs
 
-<img src="https://i.imgur.com/46ZxkYP.png" alt="lab overview"/>
+  
+<h2>Actions and Observations</h2>
+Welcome to this tutorial on using Network Security Groups (NSGs) and inspecting network protocols with Wireshark in an Azure environment.
 
+We’ll begin by creating two virtual machines in Azure:
 
-<h2>In-Depth Deployment and Configuration Steps</h2>
-Once Active Directory Domain Services is installed and the VM is promoted to be the DC, "mydomain.com" was configured as a new forest. After restarting and logging back into the DC VM as "mydomain.com\labuser", you should have access to AD Users and Computers. 
+- One Linux (Ubuntu) VM
+
+- One Windows 10 VM
+Each VM should be provisioned with 2 CPUs and placed within the same Virtual Network (VNet) to ensure they can communicate privately.
+
+Once both VMs are set up:
+
+Log into the Windows VM using Remote Desktop Protocol (RDP).
+
+Download and install Wireshark from the official site:
+🔗 Wireshark Download
+
+Open Wireshark and apply a filter for ICMP traffic only. ICMP (Internet Control Message Protocol) is a Layer 3 protocol used for diagnostic purposes — for example, by the ping command to test connectivity between two hosts.
+
+From the Windows VM, ping the private IP address of the Linux VM. As you do this, you’ll observe real-time ICMP packets being captured in Wireshark.
+
+This exercise allows you to visually inspect network communication, better understand how protocols behave, and begin experimenting with NSG rules to control traffic flow.
 
 
 <p>
