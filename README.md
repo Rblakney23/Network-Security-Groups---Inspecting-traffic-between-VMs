@@ -89,12 +89,17 @@ In this next part, I used PowerShell to create additional users, picked one rand
 <br />
 
 <p>
-<img src="https://i.imgur.com/bVx5cRC.png" height="400%" width="80%" alt="AD-powerShellUsers"/>
+<img src="https://i.imgur.com/UYLtPvN.png" height="400%" width="80%" alt="AD-remoteDesktop"/>
 </p>
 <p>
-<img src="https://i.imgur.com/1NNidgy.png" height="400%" width="80%" alt="AD-powerShellUsers"/>
+In this next part, I used PowerShell to create additional users, picked one random user to RDP into Client-1, and confirmed the successful login.
 </p>
-<p>
-<img src="https://i.imgur.com/dk4usQ7.png" height="400%" width="80%" alt="AD-userRDP"/>
-</p>
+<br />
 
+<p>
+<img src="https://i.imgur.com/j3GQ0a3.png" height="400%" width="80%" alt="AD-remoteDesktop"/>
+</p>
+<p>
+In this next part, I used PowerShell to create additional users, picked one random user to RDP into Client-1, and confirmed the successful login.
+</p>
+<br />
