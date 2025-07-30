@@ -39,14 +39,14 @@ Each VM should be provisioned with 2 CPUs and placed within the same Virtual Net
 
 Once both VMs are set up:
 
-Log into the Windows VM using Remote Desktop Protocol (RDP).
+- Log into the Windows VM using Remote Desktop Protocol (RDP).
 
-Download and install Wireshark from the official site:
+- Download and install Wireshark from the official site:
 🔗 Wireshark Download
 
-Open Wireshark and apply a filter for ICMP traffic only. ICMP (Internet Control Message Protocol) is a Layer 3 protocol used for diagnostic purposes — for example, by the ping command to test connectivity between two hosts.
+- Open Wireshark and apply a filter for ICMP traffic only. ICMP (Internet Control Message Protocol) is a Layer 3 protocol used for diagnostic purposes — for example, by the ping command to test connectivity between two hosts.
 
-From the Windows VM, ping the private IP address of the Linux VM. As you do this, you’ll observe real-time ICMP packets being captured in Wireshark.
+- From the Windows VM, ping the private IP address of the Linux VM. As you do this, you’ll observe real-time ICMP packets being captured in Wireshark.
 
 This exercise allows you to visually inspect network communication, better understand how protocols behave, and begin experimenting with NSG rules to control traffic flow.
 
