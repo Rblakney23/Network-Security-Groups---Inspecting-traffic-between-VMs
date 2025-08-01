@@ -67,7 +67,13 @@ We can examine each individual packet to view the detailed data transmitted duri
 <img src="https://i.imgur.com/j8r1r01.png" height="400%" width="80%" alt="AD-adminCreation"/>
 </p>
 <p>
-Next, we have to join Client-1 machine to the Domain. To do this, right-click the Windows icon in the bottom left of the screen. Select System -> Rename this PC (advanced) -> under Computer Name select Change -> domain -> enter "mydomain.com". After your computer restarts, log back into the client machine with the "mydomain.com\labuser" credentials. Client-1 will now be a part of mydomain.com
+In the next phase of the lab, we’ll initiate a continuous ping from the Windows machine to the Linux VM using the ping -t command. This command sends repeated ICMP echo requests until manually stopped.
+
+While the ping is running, switch to the Linux VM and configure its Network Security Group (NSG) to block inbound ICMP traffic. Once this rule is applied, the Windows machine will stop receiving echo replies — effectively demonstrating how NSGs control network traffic.
+
+To reverse the change, simply modify the NSG to allow ICMP traffic again through the Azure portal on the Linux VM’s NSG settings.
+
+This section of the lab helps visualize how firewall rules directly impact real-time communication between cloud-hosted machines.
 </p>
 <br />
 
@@ -75,7 +81,11 @@ Next, we have to join Client-1 machine to the Domain. To do this, right-click th
 <img src="https://i.imgur.com/wgPjX9P.png" height="400%" width="80%" alt="AD-joinClientDomain"/>
 </p>
 <p>
-Now that Client-1 is joined to the Domain, the next part is to set up Remote Desktop for non-admin users on the client machine. Log into Client-1 as jane_admin -> right-click the Windows icon in the bottom left of the screen. Select System -> Remote Desktop -> add "Domain Users" to give that group access to remote desktop.  
+Next, we’ll use the Windows VM to initiate an SSH connection to the Linux machine. SSH (Secure Shell) is a command-line-based protocol that provides secure remote access to a machine’s terminal without a graphical interface.
+
+Before initiating the connection, set your Wireshark filter to capture only SSH traffic by using the filter tcp.port == 22.
+
+Once the connection is established, you’ll immediately see SSH packets being captured in Wireshark, allowing you to observe the secure session in real time.
 </p>
 <br />
 
