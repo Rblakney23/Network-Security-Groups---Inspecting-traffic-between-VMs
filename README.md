@@ -107,7 +107,13 @@ This command forces the system to request a new IP address from the DHCP server.
 <img src="https://i.imgur.com/UYLtPvN.png" height="400%" width="80%" alt="AD-remoteDesktop"/>
 </p>
 <p>
-In this next part, I used PowerShell to create additional users, picked one random user to RDP into Client-1, and confirmed the successful login.
+Now we’ll examine DNS (Domain Name System) traffic using Wireshark. DNS is responsible for translating human-readable domain names into IP addresses.
+
+From the Windows VM, initiate a DNS query by running the command:
+
+"nslookup www.google.com"
+
+This command sends a request to the configured DNS server asking for the IP address of www.google.com. Wireshark will capture and display the DNS request and the corresponding response, allowing you to observe how domain resolution works in real time.
 </p>
 <br />
 
@@ -115,6 +121,12 @@ In this next part, I used PowerShell to create additional users, picked one rand
 <img src="https://i.imgur.com/j3GQ0a3.png" height="400%" width="80%" alt="AD-remoteDesktop"/>
 </p>
 <p>
-In this next part, I used PowerShell to create additional users, picked one random user to RDP into Client-1, and confirmed the successful login.
+Lastly, we’ll filter for Remote Desktop Protocol (RDP) traffic, which uses TCP port 3389. To do this in Wireshark, apply the following filter:
+
+"tcp.port ==3389"
+
+Since we are actively connected to the Windows VM via RDP, you’ll notice a constant stream of traffic being captured. This is because RDP maintains a persistent connection and continuously transmits data to reflect GUI activity and user input in real time.
+
+This observation demonstrates how RDP operates as a chatty protocol and highlights its behavior within a live network environment.
 </p>
 <br />
