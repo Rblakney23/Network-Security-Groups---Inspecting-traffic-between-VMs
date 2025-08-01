@@ -90,10 +90,16 @@ Once the connection is established, you’ll immediately see SSH packets being c
 <br />
 
 <p>
-<img src="https://i.imgur.com/wgPjX9P.png" height="400%" width="80%" alt="AD-remoteDesktop"/>
+<img src="https://i.imgur.com/X93flTl.png" height="400%" width="80%" alt="DHCP filter"/>
 </p>
 <p>
-In this next part, I used PowerShell to create additional users, picked one random user to RDP into Client-1, and confirmed the successful login.
+Next, we’ll use Wireshark to analyze DHCP (Dynamic Host Configuration Protocol) traffic. DHCP operates on UDP ports 67 and 68 and is responsible for automatically assigning IP addresses and network configuration to devices.
+
+To trigger DHCP traffic, run the following command in the Windows VM:
+
+"ipconfig /renew"
+
+This command forces the system to request a new IP address from the DHCP server.
 </p>
 <br />
 
